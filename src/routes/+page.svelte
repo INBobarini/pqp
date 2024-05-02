@@ -4,6 +4,23 @@
     <h2>Product design: 1965-A1</h2>
 </header>
 
+Plan: <select bind:value={selectedPlan}>
+    {#each plans as plan, i}
+    <option>{plan}</option>
+    {/each}
+</select>
+
+Product: <select bind:value={selectedProduct}>
+    {#each products as product, i}
+    <option>{product}</option>
+    {/each}
+</select>
+
+
+<i class="bi bi-unlock-fill"></i>
+<i class="bi bi-lock-fill"></i>
+<button>Add current req to product</button>
+<button>Add current op to plan</button>
 <div>
     {#each Object.keys(requirements) as reqKey, i}
         <label for="{reqKey}">{reqKey}:</label>
@@ -38,7 +55,11 @@
     let operations = {
 
     }
-        
+    let plans = ["1","2"]
+    let selectedPlan = null
+    let products = ["1345","2223"]
+    let selectedProduct = null
+     
 </script>
 <style>
     header{

@@ -5,7 +5,7 @@
 title: PQP Tables
 ---
 classDiagram
-    direction LR
+    direction RL
     REQUIREMENT: name
     REQUIREMENT: type
     REQUIREMENT: description
@@ -32,6 +32,11 @@ classDiagram
     OPERATION: update()
     OPERATION: delete()
 
+    DOCUMENTATION: records
+    DOCUMENTATION: procedures
+    DOCUMENTATION: outsourcedAct
+    DOCUMENTATION: drawings
+
     CHARACTERISTIC:value
     CHARACTERISTIC:uncertainty
     OpType: manufacture
@@ -42,12 +47,12 @@ classDiagram
     PRODUCT: CHARACTERISTIC
 
 
-    Plan: Requirements
-    Plan: Operations
-    Plan: AsignOpToReq()
+    PLAN: Requirements
+    PLAN: Operations
+    PLAN: AsignOpToReq()
 
-    Plan o-- REQUIREMENT
-    Plan o-- OPERATION
+    PLAN o-- REQUIREMENT
+    PLAN o-- OPERATION
     OPERATION <|-- PRODUCT
     REQUIREMENT <|-- PRODUCT
     OPERATION <|--OpType
