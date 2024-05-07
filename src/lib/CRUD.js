@@ -67,13 +67,20 @@ class ModelManager {
         }
         return i
     }
-}
-export const productModel = {
-    name:'text',//default and type of input
-    color:'text'
+    keys(){//util returns the array of keys of the model used
+        return Object.keys(this.props)
+    }
 }
 
-export const products = new ModelManager(productModel)
+export const models = {}
+models.product = {
+    iu:'text',
+    name:'text',
+    price:'number'
+}
+
+
+export const products = new ModelManager(models.product,"Product")
 
 
 //---quick test---
