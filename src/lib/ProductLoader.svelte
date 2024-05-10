@@ -1,6 +1,5 @@
 <script>
-	import {products} from  './CRUD.js'
-    
+	import {products} from  './CRUD.ts'
     let pStorage = []
     let inputsNamesAndTypes = Object.entries(products.props)
     let productKeys = Object.keys(products.props)
@@ -12,7 +11,7 @@
         let newProduct = {} 
         productKeys.forEach((k)=>newProduct[k]=event.target.elements[k].value)
         let savedProduct = products.createOne(newProduct);
-        console.log(savedProduct)
+        
         event.target.reset();
         pStorage = products.storage
     }

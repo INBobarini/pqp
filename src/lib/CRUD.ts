@@ -1,14 +1,20 @@
-import { generateRandomId } from "../utils.js";
+import { generateRandomId } from "../utils.ts";
+
 
 class ModelManager {
-    constructor(props, label) {
+    storage:any[];
+    props:any;
+    generateRandomId : (length:number)=>string;
+    label:string;
+
+    constructor(props:any, label:string) {
         this.storage = []
         this.props = props
         this.generateRandomId = generateRandomId
         this.label = label
     }
-    createOne(obj) { //returns the created object
-        let newObj = {};
+    createOne(obj: any) : any { //returns the created object
+        let newObj : {[key:string]:any} = {};
         newObj.index = this.generateRandomId(8);
         
         for (const key in obj) {
@@ -72,7 +78,7 @@ class ModelManager {
     }
 }
 
-export const models = {}
+export const models : any = {}
 models.product = {
     iu:'text',
     name:'text',

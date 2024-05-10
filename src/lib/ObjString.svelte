@@ -14,7 +14,7 @@
     l1b:"l1b"
 };
 
-console.log(testObj);
+
 
 function stringifyObject(obj, depth = 0) {
     let str = '';
@@ -32,7 +32,7 @@ function stringifyObject(obj, depth = 0) {
     return str;
 }
 let str = stringifyObject(objInput||testObj);
-console.log(str);
+
 </script>
 <pre>{str}</pre>
 
