@@ -1,15 +1,14 @@
 <script>
-    import ObjString from "./ObjString.svelte";
+	import Operation from "./Operation.svelte";
+    
     export let plan
-
-    //import Operation from '../lib/Operation.svelte';
-    console.log(plan.operations)
 </script>
 
 <div>
     {#each plan.operations as operation, i}
         <div>
-            <ObjString objInput={operation}/>
+            <Operation operation={operation}/>
+
         </div>
         
     {/each}
