@@ -1,5 +1,5 @@
 <script>
-	import {products} from  './CRUD.ts'
+	import {products} from  '../CRUD.ts'
     let pStorage = []
     let inputsNamesAndTypes = Object.entries(products.props)
     let productKeys = Object.keys(products.props)
@@ -52,6 +52,6 @@
 
 <style>
     .container{
-        border: 1px solid blue;
+        border: 2px solid orangered;
     }
 </style>

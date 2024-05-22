@@ -30,6 +30,7 @@ class ModelManager {
         return newObj;
     }
     readAll() { //returns the array of objects
+        console.log("readAll triggered")
         return this.storage;
     }
     readOne(prop) { //returns an object
@@ -84,9 +85,40 @@ models.product = {
     name:'text',
     price:'number'
 }
+models.operation = {
+    name:'text',
+    description:'text',
+    requirements:[],
+    machines:[],
+    methods:[],
+    measurements:[],
+    motherNatures:[],
+    materials:[],
+    manPowers:[]
+}
+models.plan = {
+    name:'text',
+    description:'text',
+    operations:[],
+    product:[],
+}
+models.product = {
+    name:'text',
+    description:'text',
+    requirements:[]
+}
+models.characteristics = {}
+
+
 
 
 export const products = new ModelManager(models.product,"Product")
+
+export const managers:any = {}
+managers.operation = new ModelManager(models.operation,"operation")
+managers.product = new ModelManager(models.product,"product")
+
+
 
 
 //---quick test---
